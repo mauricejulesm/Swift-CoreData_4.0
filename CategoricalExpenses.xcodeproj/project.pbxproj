@@ -16,6 +16,10 @@
 		58A73BBF1FB550A2001EF4DF /* NewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A73BBB1FB550A2001EF4DF /* NewExpenseViewController.swift */; };
 		58A73BC01FB550A2001EF4DF /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A73BBC1FB550A2001EF4DF /* CategoriesViewController.swift */; };
 		58A73BC11FB550A2001EF4DF /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A73BBD1FB550A2001EF4DF /* ExpensesViewController.swift */; };
+		D29C5B5B234A0C2A0011AF5B /* Expense+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29C5B57234A0C2A0011AF5B /* Expense+CoreDataClass.swift */; };
+		D29C5B5C234A0C2A0011AF5B /* Expense+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29C5B58234A0C2A0011AF5B /* Expense+CoreDataProperties.swift */; };
+		D29C5B5D234A0C2A0011AF5B /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29C5B59234A0C2A0011AF5B /* Category+CoreDataClass.swift */; };
+		D29C5B5E234A0C2A0011AF5B /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29C5B5A234A0C2A0011AF5B /* Category+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		58A73BBB1FB550A2001EF4DF /* NewExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewExpenseViewController.swift; sourceTree = "<group>"; };
 		58A73BBC1FB550A2001EF4DF /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		58A73BBD1FB550A2001EF4DF /* ExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
+		D29C5B57234A0C2A0011AF5B /* Expense+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expense+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D29C5B58234A0C2A0011AF5B /* Expense+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expense+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D29C5B59234A0C2A0011AF5B /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D29C5B5A234A0C2A0011AF5B /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 		58A73BA41FB55081001EF4DF /* CategoricalExpenses */ = {
 			isa = PBXGroup;
 			children = (
+				D29C5B56234A0BEE0011AF5B /* MODELS */,
 				58A73BBC1FB550A2001EF4DF /* CategoriesViewController.swift */,
 				58A73BBD1FB550A2001EF4DF /* ExpensesViewController.swift */,
 				58A73BBA1FB550A2001EF4DF /* NewCategoryViewController.swift */,
@@ -82,6 +91,17 @@
 				58A73BA51FB55081001EF4DF /* AppDelegate.swift */,
 			);
 			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		D29C5B56234A0BEE0011AF5B /* MODELS */ = {
+			isa = PBXGroup;
+			children = (
+				D29C5B57234A0C2A0011AF5B /* Expense+CoreDataClass.swift */,
+				D29C5B58234A0C2A0011AF5B /* Expense+CoreDataProperties.swift */,
+				D29C5B59234A0C2A0011AF5B /* Category+CoreDataClass.swift */,
+				D29C5B5A234A0C2A0011AF5B /* Category+CoreDataProperties.swift */,
+			);
+			name = MODELS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,11 +176,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29C5B5B234A0C2A0011AF5B /* Expense+CoreDataClass.swift in Sources */,
 				58A73BC11FB550A2001EF4DF /* ExpensesViewController.swift in Sources */,
 				58A73BBE1FB550A2001EF4DF /* NewCategoryViewController.swift in Sources */,
 				58A73BC01FB550A2001EF4DF /* CategoriesViewController.swift in Sources */,
+				D29C5B5C234A0C2A0011AF5B /* Expense+CoreDataProperties.swift in Sources */,
 				58A73BAE1FB55081001EF4DF /* CategoricalExpenses.xcdatamodeld in Sources */,
 				58A73BBF1FB550A2001EF4DF /* NewExpenseViewController.swift in Sources */,
+				D29C5B5E234A0C2A0011AF5B /* Category+CoreDataProperties.swift in Sources */,
+				D29C5B5D234A0C2A0011AF5B /* Category+CoreDataClass.swift in Sources */,
 				58A73BA61FB55081001EF4DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

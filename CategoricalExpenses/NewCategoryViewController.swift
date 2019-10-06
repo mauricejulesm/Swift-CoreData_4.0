@@ -28,7 +28,22 @@ class NewCategoryViewController: UIViewController {
     }
     
     @IBAction func saveCategory(_ sender: Any) {
-        
+		let title = titleTextField.text
+		
+		if title == "" {
+			print("Category title can't be empty! Try again.")
+			return
+		}
+		
+		let newCategory = Category(title: title ?? "No Category")
+		
+		do {
+			try newCategory?.managedObjectContext?.save()
+			print("Saved category: \(title!) successfully")
+			self.navigationController?.popViewController(animated: true)
+		} catch {
+			print("Unable to save the new category \(title!)")
+		}
     }
 }
 
