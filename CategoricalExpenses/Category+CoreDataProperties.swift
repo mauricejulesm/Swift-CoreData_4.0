@@ -25,34 +25,34 @@ extension Category {
 // MARK: Generated accessors for expenses
 extension Category {
 
-    @objc(insertObject:inExpensesAtIndex:)
-    @NSManaged public func insertIntoExpenses(_ value: Expense, at idx: Int)
+    @objc(insertObject:inRawExpensesAtIndex:)
+    @NSManaged public func insertIntoRawExpenses(_ value: Expense, at idx: Int)
 
-    @objc(removeObjectFromExpensesAtIndex:)
-    @NSManaged public func removeFromExpenses(at idx: Int)
+    @objc(removeObjectFromRawExpensesAtIndex:)
+    @NSManaged public func removeFromRawExpenses(at idx: Int)
 
-    @objc(insertExpenses:atIndexes:)
-    @NSManaged public func insertIntoExpenses(_ values: [Expense], at indexes: NSIndexSet)
+    @objc(insertRawExpenses:atIndexes:)
+    @NSManaged public func insertIntoRawExpenses(_ values: [Expense], at indexes: NSIndexSet)
 
-    @objc(removeExpensesAtIndexes:)
-    @NSManaged public func removeFromExpenses(at indexes: NSIndexSet)
+    @objc(removeRawExpensesAtIndexes:)
+    @NSManaged public func removeFromRawExpenses(at indexes: NSIndexSet)
 
-    @objc(replaceObjectInExpensesAtIndex:withObject:)
+    @objc(replaceObjectInRawExpensesAtIndex:withObject:)
     @NSManaged public func replaceExpenses(at idx: Int, with value: Expense)
 
-    @objc(replaceExpensesAtIndexes:withExpenses:)
-    @NSManaged public func replaceExpenses(at indexes: NSIndexSet, with values: [Expense])
+    @objc(replaceRawExpensesAtIndexes:withExpenses:)
+    @NSManaged public func replaceRawExpenses(at indexes: NSIndexSet, with values: [Expense])
 
-    @objc(addExpensesObject:)
-    @NSManaged public func addToExpenses(_ value: Expense)
+    @objc(addRawExpensesObject:)
+    @NSManaged public func addToRawExpenses(_ value: Expense)
 
-    @objc(removeExpensesObject:)
-    @NSManaged public func removeFromExpenses(_ value: Expense)
+    @objc(removeRawExpensesObject:)
+    @NSManaged public func removeFromRawExpenses(_ value: Expense)
 
-    @objc(addExpenses:)
-    @NSManaged public func addToExpenses(_ values: NSOrderedSet)
+    @objc(addRawExpenses:)
+    @NSManaged public func addToRawExpenses(_ values: NSOrderedSet)
 
-    @objc(removeExpenses:)
-    @NSManaged public func removeFromExpenses(_ values: NSOrderedSet)
+    @objc(removeRawExpenses:)
+    @NSManaged public func removeFromRawExpenses(_ values: NSOrderedSet)
 
 }

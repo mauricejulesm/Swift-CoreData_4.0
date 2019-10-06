@@ -23,6 +23,10 @@ class ExpensesViewController: UIViewController {
         dateFormatter.dateStyle = .long
 
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		self.expensesTableView.reloadData()
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,6 +36,13 @@ class ExpensesViewController: UIViewController {
     @IBAction func addNewExpense(_ sender: Any) {
         performSegue(withIdentifier: "showExpense", sender: self)
     }
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let destinationVC = segue.destination as? NewExpenseViewController else {
+			return
+		}
+		destinationVC.category = currentCategory
+	}
 }
 
 extension ExpensesViewController: UITableViewDataSource {
