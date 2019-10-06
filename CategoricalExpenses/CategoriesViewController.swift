@@ -52,6 +52,26 @@ class CategoriesViewController: UIViewController {
 		}
 		destinationVC.currentCategory = categories[selectedRow]
 	}
+	
+	func deleteCategory(at indexPath: IndexPath) {
+		let category = categories[indexPath.row]
+		
+		guard let context = category.managedObjectContext else {
+			return
+		}
+		
+		context.delete(category)
+		
+		do {
+			try context.save()
+			categories.remove(at: indexPath.row)
+			categoriesTableView.deleteRows(at: [indexPath], with: .automatic)
+		} catch  {
+			print("Unable to delete the category")
+			categoriesTableView.reloadRows(at: [indexPath], with: .automatic)
+		}
+		
+	}
 
 	
 	// getting the file path of the sqlite file
@@ -75,4 +95,10 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
 		
         return cell
     }
+	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			deleteCategory(at: indexPath)
+		}
+	}
 }
