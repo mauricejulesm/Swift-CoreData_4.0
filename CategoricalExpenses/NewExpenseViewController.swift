@@ -13,7 +13,9 @@ class NewExpenseViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
+	
+	var category: Category?
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 

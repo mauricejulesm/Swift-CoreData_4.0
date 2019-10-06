@@ -13,7 +13,9 @@ class ExpensesViewController: UIViewController {
     @IBOutlet weak var expensesTableView: UITableView!
     
     let dateFormatter = DateFormatter()
-    
+	
+	var currentCategory : Category?
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,12 +36,19 @@ class ExpensesViewController: UIViewController {
 
 extension ExpensesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return currentCategory?.expenses?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = expensesTableView.dequeueReusableCell(withIdentifier: "expenseCell", for: indexPath)
-        
+		
+		if let expense = currentCategory?.expenses?[indexPath.row]{
+			cell.textLabel?.text = expense.name
+			if let date = expense.date {
+				cell.detailTextLabel?.text = dateFormatter.string(from: date)
+			}
+		}
+		
         return cell
     }
 }

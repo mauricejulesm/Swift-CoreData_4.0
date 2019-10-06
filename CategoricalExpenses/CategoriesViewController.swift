@@ -45,6 +45,15 @@ class CategoriesViewController: UIViewController {
 		
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let destinationVC = segue.destination as? ExpensesViewController,
+			let selectedRow = self.categoriesTableView.indexPathForSelectedRow?.row else{
+				return
+		}
+		destinationVC.currentCategory = categories[selectedRow]
+	}
+
+	
 	// getting the file path of the sqlite file
 	func applicationDocumentsDirectory() {
 		if let url = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).last {
